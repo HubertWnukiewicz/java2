@@ -1,6 +1,9 @@
+
+
 public class myThread extends Thread{
     private RefMap problemMap;
     private int id;
+
     myThread(RefMap problemMap,int id){
         this.id=id;
         this.problemMap = problemMap;
@@ -8,19 +11,17 @@ public class myThread extends Thread{
 
     public void run(){
 
-        synchronized (problemMap){
-
             while(true){
 
                 try {
-                   sleep(100);
+                   sleep(250);
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
-                System.out.println("ID= "+this.id);
-                System.out.flush();
+                //System.out.println("ID= "+this.id);
+                //System.out.flush();
                 problemMap.solve();
             }
         }
     }
-}
+

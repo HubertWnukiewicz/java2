@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="Knapsack">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../Knapsack/out/artifacts/Knapsack_jar/Knapsack.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

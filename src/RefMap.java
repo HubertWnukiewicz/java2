@@ -1,7 +1,6 @@
 import knapsack.Instance;
 import knapsack.Item;
 import knapsack.Result;
-
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.util.*;
@@ -9,19 +8,19 @@ import java.util.*;
 public class RefMap {
 
     private final int minRange = 1;
-    private final int maxRange = 500;
+    private final int maxRange = 250;
     int totalHits = 0;
     int missedHits = 0;
-    HashMap<Long, Result> solutionWeakHashMap;
+    WeakHashMap<Long, Result> solutionWeakHashMap;
     ArrayList<Class> solverClasses;
 
-    public RefMap(Map<Long, Result> solutionWeakHashMap, List<Class> solverClasses){
+    public RefMap( WeakHashMap<Long, Result> solutionWeakHashMap, ArrayList<Class> solverClasses){
 
-        this.solutionWeakHashMap=(HashMap<Long,Result>) solutionWeakHashMap;
-        this.solverClasses=(ArrayList<Class>) solverClasses;
+        this.solutionWeakHashMap= solutionWeakHashMap;
+        this.solverClasses=solverClasses;
     }
 
-    public synchronized void solve(){
+    public void solve(){
         long seed = generateRandomIntIntRange(minRange, maxRange);
         totalHits++;
 
@@ -63,24 +62,21 @@ public class RefMap {
         }
     }
 
-
     private static Instance getRandomInstance(long seed) {
 
-        long problemSize = seed / 2;
-        int capacity = (int) seed * 2 + 5;
+        long problemSize = seed %30;
+        int capacity = (int) seed %150+50;
 
         ArrayList<Item> items = new ArrayList<>();
         for (int i = 1; i <= problemSize; i++) {
-            items.add(new Item(i + 5, (float)(i * 1.5 + seed) % seed));
+            items.add(new Item(i , (float)(i * 1.5 + seed) % seed));
         }
         return new Instance(capacity, items);
     }
 
     private static long generateRandomIntIntRange(int min, int max) {
-
         Random r = new Random();
         int selectedValue = r.nextInt((max - min) ) + min;
-        System.out.println(selectedValue);
         return Long.valueOf(selectedValue);
     }
 }

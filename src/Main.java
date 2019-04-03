@@ -2,13 +2,13 @@ import knapsack.Instance;
 import knapsack.Result;
 import java.io.File;
 import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Map;
+
+import java.util.WeakHashMap;
 import java.util.stream.Collectors;
 
 public class Main {
 
-    private static Map<Long, Result> solutionWeakHashMap = new HashMap<>();
+    private static WeakHashMap<Long, Result> solutionWeakHashMap = new WeakHashMap<>();
     private static ArrayList<Class> solverClasses = new ArrayList<>();
 
     public static void main(String[] args) throws ClassNotFoundException {
