@@ -2,16 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d2827302-0e08-4b6b-8d1e-95e81fa0dc2f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/SoftRefMap.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Knapsack.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Knapsack.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/JavaLab2/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JavaLab2/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JavaLab2/RefMap.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JavaLab2/myThread.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/RefMap.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/myThread.java" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -184,7 +176,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1554407630150" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1554407729352" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
@@ -245,16 +237,23 @@
       <workItem from="1554369584830" duration="607000" />
       <workItem from="1554370502669" duration="4413000" />
       <workItem from="1554386215701" duration="1679000" />
-      <workItem from="1554400811883" duration="5049000" />
+      <workItem from="1554400811883" duration="5315000" />
     </task>
+    <task id="LOCAL-00001" summary="ff">
+      <created>1554407802856</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1554407802857</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="32206000" />
+    <option name="totallyTimeSpent" value="32472000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Designer" order="0" />
       <window_info id="UI Designer" order="1" />
@@ -264,13 +263,13 @@
       <window_info active="true" content_ui="combo" id="Project" order="5" visible="true" weight="0.20890689" />
       <window_info id="Structure" order="6" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Docker" order="0" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="1" weight="0.32969603" />
+      <window_info anchor="bottom" id="Version Control" order="1" visible="true" weight="0.3285968" />
       <window_info anchor="bottom" id="Terminal" order="2" weight="0.3285968" />
       <window_info anchor="bottom" id="Database Changes" order="3" />
       <window_info anchor="bottom" id="Event Log" order="4" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="5" />
       <window_info anchor="bottom" id="Find" order="6" visible="true" weight="0.3285968" />
-      <window_info anchor="bottom" id="Run" order="7" visible="true" weight="0.27353463" />
+      <window_info anchor="bottom" id="Run" order="7" weight="0.27353463" />
       <window_info anchor="bottom" id="Debug" order="8" weight="0.3988245" />
       <window_info anchor="bottom" id="Cvs" order="9" weight="0.25" />
       <window_info anchor="bottom" id="Messages" order="10" weight="0.40674955" />
@@ -320,6 +319,36 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="RECENTLY_FILTERED_USER_GROUPS">
+                <collection />
+              </option>
+              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+                <collection />
+              </option>
+              <option name="COLUMN_ORDER">
+                <list>
+                  <option value="0" />
+                  <option value="1" />
+                  <option value="2" />
+                  <option value="3" />
+                </list>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="ff" />
+    <option name="LAST_COMMIT_MESSAGE" value="ff" />
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
