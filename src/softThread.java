@@ -14,7 +14,7 @@ public class softThread extends Thread{
             while(true){
 
                 try {
-                   sleep(350);
+                   sleep(3);
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
@@ -22,7 +22,7 @@ public class softThread extends Thread{
                     System.out.print("ID= " + this.id);
                     System.out.flush();
                 }
-                problemMap.startAlg();
+                problemMap.startAlg(id);
             }
         }
         public int getID(){

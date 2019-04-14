@@ -12,7 +12,7 @@ public class SoftRefMap {
     private int maxSize = 0;
     private int found = 0;
     private final int minimum = 1;
-    private final int maximum = 100;
+    private final int maximum = 1000;
 
     HashMap<Long, SoftReference<TempClass>> solutionWeakHashMap;
     ArrayList<Class> solverClasses;
@@ -28,7 +28,7 @@ public class SoftRefMap {
         return Long.valueOf(selectedValue);
     }
 
-    public void startAlg(){
+    public void startAlg(int id){
         long seed = generateRandomIntIntRange(minimum, maximum);
         maxSize++;
         //128 750
@@ -50,7 +50,7 @@ public class SoftRefMap {
                     System.out.println(" Rozwiazanie: Seed " + seed +", klasa: "+ algorithmClass.toString()+ ", wynik: " + result.calculateFinalValue());
                     System.out.flush();
                 }
-                TempClass tempClass=new TempClass();
+                TempClass tempClass=new TempClass(100000);
                 tempClass.setResult(result);
                 SoftReference<TempClass> tc=new SoftReference<TempClass>(tempClass);
                 tc.get().setResult(result);
@@ -66,13 +66,10 @@ public class SoftRefMap {
                 e.printStackTrace();
             }
         } else {
-
             synchronized (System.out) {
 
                 System.out.print(" TAKIE ROZWIAZANIE JUZ ISTNIEJE NR:" + seed);
                 System.out.flush();
-
-
             }
             SoftReference value=solutionWeakHashMap.get(seed);
             if(value.get()==null)
@@ -85,6 +82,14 @@ public class SoftRefMap {
                 System.out.println("-----ELEMENT JUZ NIE ISTNIEJE-------");
             }
 
+            if (id == 1) {
+                System.out.println(solutionWeakHashMap.size());
+                try {
+                    Thread.sleep(3);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+            }
         }
     }
 

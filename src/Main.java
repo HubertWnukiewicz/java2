@@ -47,6 +47,8 @@ public class Main {
         System.out.println("Finished loading solver classes:");
         System.out.println("\n{}"+ solverClasses.stream().map(c -> c.toString()).collect(Collectors.joining("\n")));
 
+        //hardStart();
+        //weakStart();
         softStart();
 
         loadedClasses=null;
@@ -84,21 +86,21 @@ public class Main {
         weakThread thread3=new weakThread(softRefMap,3);
         weakThread thread4=new weakThread(softRefMap,4);
         weakThread thread5=new weakThread(softRefMap,5);
-        weakThread thread6=new weakThread(softRefMap,6);
+
 
         thread1.start();
         thread2.start();
         thread3.start();
         thread4.start();
         thread5.start();
-        thread6.start();
+
 
         thread1.join();
         thread2.join();
         thread3.join();
         thread4.join();
         thread5.join();
-        thread6.join();
+
     }
     private static void hardStart() throws InterruptedException {
         HardRefMap softRefMap = new HardRefMap(solutionHardHashMap, solverClasses);
@@ -123,6 +125,7 @@ public class Main {
         thread5.join();
         thread6.join();
     }
+
     private static ArrayList<Class> reloadClasses(File directory, String packageName) throws ClassNotFoundException {
         ArrayList<Class> classes = new ArrayList<Class>();
         if (!directory.exists()) {

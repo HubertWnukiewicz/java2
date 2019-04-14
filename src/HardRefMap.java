@@ -13,7 +13,7 @@ public class HardRefMap {
     private int maxSize = 0;
     private int found = 0;
     private final int minimum = 1;
-    private final int maximum = 100;
+    private final int maximum = 250;
 
     HashMap<Long,TempClass> solutionWeakHashMap;
     ArrayList<Class> solverClasses;
@@ -50,7 +50,7 @@ public class HardRefMap {
                     System.out.println(" Rozwiazanie: Seed " + seed +", klasa: "+ algorithmClass.toString()+ ", wynik: " + result.calculateFinalValue());
                     System.out.flush();
                 }
-                TempClass tc=new TempClass();
+                TempClass tc=new TempClass(100000);
                 tc.setResult(result);
                 solutionWeakHashMap.put(seed, tc);
 

@@ -4,9 +4,9 @@ public class TempClass {
     Result result;
     String data;
 
-    public TempClass(){
+    public TempClass(int x){
         result=new Result();
-        data=createDataSize(300000);
+        data=createDataSize(x);
     }
     public Result getResult() {
         return result;

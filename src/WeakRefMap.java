@@ -2,6 +2,7 @@ import knapsack.Instance;
 import knapsack.Item;
 import knapsack.Result;
 
+import java.lang.ref.SoftReference;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.util.ArrayList;
@@ -12,7 +13,7 @@ public class WeakRefMap {
     private int maxSize = 0;
     private int found = 0;
     private final int minimum = 1;
-    private final int maximum = 100;
+    private final int maximum = 200;
 
     WeakHashMap<Long, TempClass> solutionWeakHashMap;
     ArrayList<Class> solverClasses;
@@ -50,7 +51,7 @@ public class WeakRefMap {
                     System.out.println(" Rozwiazanie: Seed " + seed +", klasa: "+ algorithmClass.toString()+ ", wynik: " + result.calculateFinalValue());
                     System.out.flush();
                 }
-                TempClass tc=new TempClass();
+                TempClass tc=new TempClass(10000);
                 tc.setResult(result);
                 solutionWeakHashMap.put(seed, tc);
 
@@ -65,26 +66,18 @@ public class WeakRefMap {
             }
         } else {
             found++;
-            synchronized (System.out) {
-
-                System.out.print(" TAKIE ROZWIAZANIE JUZ ISTNIEJE NR:" + seed);
-                System.out.flush();
+            synchronized (System.out)
+            {
+                System.out.println(" TAKIE ROZWIAZANIE ISTNIEJE:  "+seed);
                 System.out.print(" RATIO : " + (float) (found * 1.0 / maxSize));
-                System.out.flush();
-                System.out.println(" ");
-                System.out.flush();
-
             }
-            TempClass value=solutionWeakHashMap.get(seed);
-            if(value==null)
-                System.out.println("ELEMENT JUZ NIE ISTNIEJE");
-        }
+            }
     }
 
     private static Instance getRandomInstance(long seed) {
 
-        long numberOfItems= (int)seed %30+2;
-        int capacity = (int) seed %150+50;
+        long numberOfItems= (int)seed %20+2;
+        int capacity = (int) seed %30+10;
 
         ArrayList<Item> items = new ArrayList<>();
         for (int i = 1; i <= numberOfItems; i++) {
